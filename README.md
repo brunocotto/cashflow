@@ -32,5 +32,5 @@ Para obter uma cópia local funcionando, siga estes passos simples.
     ```
 
 2. Preencha as informações no arquivo `appsettings.Development.json`.
-3. Execute a API e aproveite o seu teste :)
+3. Execute a API
 
