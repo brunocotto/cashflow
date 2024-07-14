@@ -7,22 +7,22 @@ namespace CashFlow.Infrastructure.DataAccess.Repositories;
 // internal para garantir que ExpensesRepository só sera executado dentro do prj de infra
 internal class ExpensesRepository(CashFlowDbContext dbContext) : IExpenseWriteOnlyRepository, IExpenseReadOnlyRepository, IExpenseUpdateOnlyRepository
 {
-    private readonly CashFlowDbContext _dbcontext = dbContext;
+    private readonly CashFlowDbContext _dbContext = dbContext;
 
     public async Task Add(Expense expense)
     {
-       await _dbcontext.AddAsync(expense);
+       await _dbContext.AddAsync(expense);
     }
 
     public async Task<bool> Delete(long id)
     {
-        var result = await _dbcontext.Expenses.FirstOrDefaultAsync(expense => expense.Id == id);
+        var result = await _dbContext.Expenses.FirstOrDefaultAsync(expense => expense.Id == id);
 
         if (result is null) {
             return false;
         }
 
-        _dbcontext.Expenses.Remove(result);
+        _dbContext.Expenses.Remove(result);
 
         return true;
     }
@@ -30,21 +30,21 @@ internal class ExpensesRepository(CashFlowDbContext dbContext) : IExpenseWriteOn
     public async Task<List<Expense>> GetAll()
     {
         // AsNoTracking para o entity framework não armazenas as entidades em cache, melhorando a performance
-       return await _dbcontext.Expenses.AsNoTracking().ToListAsync();
+       return await _dbContext.Expenses.AsNoTracking().ToListAsync();
     }
 
     async Task<Expense?> IExpenseReadOnlyRepository.GetById(long id)
     {
-        return await _dbcontext.Expenses.AsNoTracking().FirstOrDefaultAsync(expense => expense.Id == id);
+        return await _dbContext.Expenses.AsNoTracking().FirstOrDefaultAsync(expense => expense.Id == id);
     }
 
     async Task<Expense?> IExpenseUpdateOnlyRepository.GetById(long id)
     {
-        return await _dbcontext.Expenses.FirstOrDefaultAsync(expense => expense.Id == id);
+        return await _dbContext.Expenses.FirstOrDefaultAsync(expense => expense.Id == id);
     }
 
     public void Update(Expense expense)
     {
-         _dbcontext.Expenses.Update(expense);
+        _dbContext.Expenses.Update(expense);
     }
 }

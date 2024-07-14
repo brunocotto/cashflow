@@ -120,6 +120,9 @@
   <data name="AMOUNT_MUST_BE_GREATER_THAN_ZERO" xml:space="preserve">
     <value>The Amount be greather than zero.</value>
   </data>
+  <data name="EMAIL_ALREADY_EXIST" xml:space="preserve">
+    <value>Email already exist.</value>
+  </data>
   <data name="EMAIL_INVALID" xml:space="preserve">
     <value>Email is not valid.</value>
   </data>

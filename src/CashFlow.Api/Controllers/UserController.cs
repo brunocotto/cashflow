@@ -1,4 +1,5 @@
-﻿using CashFlow.Communication.Requests;
+﻿using CashFlow.Application.UseCases.Users.Register;
+using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,7 +16,7 @@ public class UserController : ControllerBase
         [FromServices] IRegisterUserUseCase useCase,
         [FromBody] RequestRegisterUserJson request)
     {
-        var response = await useCase.Execute();
+        var response = await useCase.Execute(request);
 
         return Created(string.Empty, response);
     }

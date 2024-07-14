@@ -70,6 +70,15 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email already exist..
+        /// </summary>
+        public static string EMAIL_ALREADY_EXIST {
+            get {
+                return ResourceManager.GetString("EMAIL_ALREADY_EXIST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email is not valid..
         /// </summary>
         public static string EMAIL_INVALID {
