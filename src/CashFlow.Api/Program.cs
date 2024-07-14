@@ -2,6 +2,8 @@ using CashFlow.Api.Filters;
 using CashFlow.Api.Middlewares;
 using CashFlow.Application;
 using CashFlow.Infrastructure;
+using CashFlow.Infrastructure.DataAccess;
+using CashFlow.Infrastructure.Migrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,4 +34,15 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+await MigrateDatabase();
+
 app.Run();
+
+// função para automatizar o processo de inserção das migrations no banco
+
+async Task MigrateDatabase()
+{
+    await using var scope = app.Services.CreateAsyncScope();
+    // passo o provedor de services para que seja possível acessar CashFlowDbContext
+    await DatabaseMigration.MigrationDatabase(scope.ServiceProvider); 
+}

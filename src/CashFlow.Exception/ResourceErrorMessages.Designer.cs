@@ -70,6 +70,24 @@ namespace CashFlow.Exception {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email is not valid..
+        /// </summary>
+        public static string EMAIL_INVALID {
+            get {
+                return ResourceManager.GetString("EMAIL_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The email is required..
+        /// </summary>
+        public static string EMAIL_REQUIRED {
+            get {
+                return ResourceManager.GetString("EMAIL_REQUIRED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Expense not a found..
         /// </summary>
         public static string EXPENSE_NOT_FOUND {
@@ -84,6 +102,24 @@ namespace CashFlow.Exception {
         public static string EXPENSES_CANNOT_FOR_THE_FUTURE {
             get {
                 return ResourceManager.GetString("EXPENSES_CANNOT_FOR_THE_FUTURE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The name is required..
+        /// </summary>
+        public static string NAME_REQUIRED {
+            get {
+                return ResourceManager.GetString("NAME_REQUIRED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The password is required..
+        /// </summary>
+        public static string PASSWORD_REQUIRED {
+            get {
+                return ResourceManager.GetString("PASSWORD_REQUIRED", resourceCulture);
             }
         }
         

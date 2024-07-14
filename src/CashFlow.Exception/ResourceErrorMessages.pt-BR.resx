@@ -120,11 +120,23 @@
   <data name="AMOUNT_MUST_BE_GREATER_THAN_ZERO" xml:space="preserve">
     <value>O valor deve ser maior que zero.</value>
   </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>O email é inválido.</value>
+  </data>
+  <data name="EMAIL_REQUIRED" xml:space="preserve">
+    <value>O email é obrigatório.</value>
+  </data>
   <data name="EXPENSES_CANNOT_FOR_THE_FUTURE" xml:space="preserve">
     <value>As despesas não podem ser para o futuro.</value>
   </data>
   <data name="EXPENSE_NOT_FOUND" xml:space="preserve">
     <value>Despesa não encontrada.</value>
+  </data>
+  <data name="NAME_REQUIRED" xml:space="preserve">
+    <value>O nome é obrigatório.</value>
+  </data>
+  <data name="PASSWORD_REQUIRED" xml:space="preserve">
+    <value>A senha é obrigatória.</value>
   </data>
   <data name="PAYMENT_TYPE_INVALID" xml:space="preserve">
     <value>Tipo de pagamento inválido.</value>
