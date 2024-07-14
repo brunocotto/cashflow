@@ -14,6 +14,7 @@ public class RegisterUserValidator : AbstractValidator<RequestRegisterUserJson>
             .WithMessage(ResourceErrorMessages.EMAIL_REQUIRED)
             .EmailAddress()
             .WithMessage(ResourceErrorMessages.EMAIL_INVALID);
-        RuleFor(expense => expense.Password).NotEmpty().WithMessage(ResourceErrorMessages.EXPENSES_CANNOT_FOR_THE_FUTURE);
+
+        RuleFor(expense => expense.Password).SetValidator(new PasswordValidator<RequestRegisterUserJson>());
     }
 }
