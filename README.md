@@ -14,14 +14,6 @@ Por fim, o **EntityFramework** atua como um ORM (Object-Relational Mapper) que s
 - **Testes de Unidade**: Testes abrangentes com FluentAssertions para garantir a funcionalidade e a qualidade.
 - **RESTful API com Documentação Swagger**: Interface documentada que facilita a integração e o teste por parte dos desenvolvedores.
 
-### Construído com
-
-![badge-dot-net]
-![badge-windows]
-![badge-visual-studio]
-![badge-mysql]
-![badge-swagger]
-
 ## Getting Started
 
 Para obter uma cópia local funcionando, siga estes passos simples.
@@ -42,5 +34,3 @@ Para obter uma cópia local funcionando, siga estes passos simples.
 2. Preencha as informações no arquivo `appsettings.Development.json`.
 3. Execute a API e aproveite o seu teste :)
 
-<!-- Badges -->
-[badge-dot-net]: https://img.shields.io/badge/.NET-512BD4?logo=dotnet&logoColor=fff&style=for-the-badge
