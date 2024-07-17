@@ -5,6 +5,9 @@ using CashFlow.Application.UseCases.Expenses.GetById;
 using CashFlow.Application.UseCases.Expenses.Register;
 using CashFlow.Application.UseCases.Expenses.Update;
 using CashFlow.Application.UseCases.Users.Register;
+using CashFlow.Domain.Security.Tokens;
+using CashFlow.Infrastructure.Security.Tokens;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CashFlow.Application;
