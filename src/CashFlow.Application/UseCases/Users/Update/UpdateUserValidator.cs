@@ -2,11 +2,11 @@ using CashFlow.Communication.Requests;
 using CashFlow.Exception;
 using FluentValidation;
 
-namespace CashFlow.Application.UseCases.Users;
+namespace CashFlow.Application.UseCases.Users.Update;
 
-public class RegisterUserValidator : AbstractValidator<RequestRegisterUserJson>
+public class UpdateUserValidator : AbstractValidator<RequestUpdateUserJson>
 {
-    public RegisterUserValidator()
+    public UpdateUserValidator()
     {
         RuleFor(user => user.Name).NotEmpty().WithMessage(ResourceErrorMessages.NAME_REQUIRED);
         RuleFor(user => user.Email)
@@ -15,7 +15,6 @@ public class RegisterUserValidator : AbstractValidator<RequestRegisterUserJson>
             .EmailAddress()
             .When(user => string.IsNullOrWhiteSpace(user.Email) == false, ApplyConditionTo.CurrentValidator)
             .WithMessage(ResourceErrorMessages.EMAIL_INVALID);
-
-        RuleFor(user => user.Password).SetValidator(new PasswordValidator<RequestRegisterUserJson>());
     }
 }
+

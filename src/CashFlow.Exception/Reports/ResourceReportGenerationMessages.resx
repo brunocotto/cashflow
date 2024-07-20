@@ -117,43 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AMOUNT_MUST_BE_GREATER_THAN_ZERO" xml:space="preserve">
-    <value>The Amount be greather than zero.</value>
+  <data name="AMOUNT" xml:space="preserve">
+    <value>Amount</value>
   </data>
-  <data name="EMAIL_ALREADY_EXIST" xml:space="preserve">
-    <value>Email already exist.</value>
+  <data name="DATE" xml:space="preserve">
+    <value>Date</value>
   </data>
-  <data name="EMAIL_INVALID" xml:space="preserve">
-    <value>Email is not valid.</value>
+  <data name="DESCRIPTION" xml:space="preserve">
+    <value>Description</value>
   </data>
-  <data name="EMAIL_OR_PASSWORD_INVALID" xml:space="preserve">
-    <value>Email or password invalid.</value>
+  <data name="PAYMENT_TYPE" xml:space="preserve">
+    <value>Payment Type</value>
   </data>
-  <data name="EMAIL_REQUIRED" xml:space="preserve">
-    <value>The email is required.</value>
-  </data>
-  <data name="EXPENSES_CANNOT_FOR_THE_FUTURE" xml:space="preserve">
-    <value>Expanses cannot be for the future.</value>
-  </data>
-  <data name="EXPENSE_NOT_FOUND" xml:space="preserve">
-    <value>Expense not a found.</value>
-  </data>
-  <data name="INVALID_PASSWORD" xml:space="preserve">
-    <value>Your password must be at least 8 characters long, containing at least one saved letter, one lowercase letter, one number and one special character (!, #, @, ?).</value>
-  </data>
-  <data name="NAME_REQUIRED" xml:space="preserve">
-    <value>The name is required.</value>
-  </data>
-  <data name="PASSWORD_DIFFERENT_CURRENT_PASSWORD" xml:space="preserve">
-    <value>The entered password is different from the current password.</value>
-  </data>
-  <data name="PAYMENT_TYPE_INVALID" xml:space="preserve">
-    <value>Payment type is not valid.</value>
-  </data>
-  <data name="TITLE_REQUIRED" xml:space="preserve">
-    <value>The title is required.</value>
-  </data>
-  <data name="UNKNOWN_ERROR" xml:space="preserve">
-    <value>Unknown error</value>
+  <data name="TITLE" xml:space="preserve">
+    <value>Title</value>
   </data>
 </root>

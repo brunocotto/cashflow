@@ -144,6 +144,9 @@
   <data name="NAME_REQUIRED" xml:space="preserve">
     <value>O nome é obrigatório.</value>
   </data>
+  <data name="PASSWORD_DIFFERENT_CURRENT_PASSWORD" xml:space="preserve">
+    <value>The entered password is different from the current password.A senha inserida é diferente da senha atual.</value>
+  </data>
   <data name="PAYMENT_TYPE_INVALID" xml:space="preserve">
     <value>Tipo de pagamento inválido.</value>
   </data>
