@@ -33,13 +33,16 @@ internal class ExpensesRepository(CashFlowDbContext dbContext) : IExpenseWriteOn
     async Task<Expense?> IExpenseReadOnlyRepository.GetById(User user, long id)
     {
         return await _dbContext.Expenses
+            .Include(expense => expense.Tags)
             .AsNoTracking()
             .FirstOrDefaultAsync(expense => expense.Id == id && expense.UserId == user.Id);
     }
 
     async Task<Expense?> IExpenseUpdateOnlyRepository.GetById(User user, long id)
     {
-        return await _dbContext.Expenses.FirstOrDefaultAsync(expense => expense.Id == id && expense.UserId == user.Id);
+        return await _dbContext.Expenses
+            .Include(expense => expense.Tags)
+            .FirstOrDefaultAsync(expense => expense.Id == id && expense.UserId == user.Id);  
     }
 
     public void Update(Expense expense)
