@@ -74,6 +74,18 @@ builder.Services.AddAuthentication(config =>
     };
 });
 
+// Configure CORS to allow specific origin and credentials
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", builder =>
+    {
+        builder.WithOrigins("http://localhost:5173")
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .AllowCredentials();
+    });
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -85,6 +97,9 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<CultureMiddleaware>();
 
 app.UseHttpsRedirection();
+
+// Enable CORS
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthentication();
 app.UseAuthorization();

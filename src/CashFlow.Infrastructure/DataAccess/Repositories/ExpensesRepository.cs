@@ -25,6 +25,7 @@ internal class ExpensesRepository(CashFlowDbContext dbContext) : IExpenseWriteOn
     {
         // AsNoTracking para o entity framework não armazenas as entidades em cache, melhorando a performance
        return await _dbContext.Expenses
+            .Include(expense => expense.Tags)
             .AsNoTracking()
             .Where(expense => expense.UserId ==  user.Id)
             .ToListAsync();
